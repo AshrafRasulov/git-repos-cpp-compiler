@@ -24,6 +24,11 @@ jobs:
           with:
             name: windows-binaries
             path: .fibs/dist/win-vstudio-release/
+        - name: Upload Windows Artifacts
+          uses: actions/upload-artifact@v4
+          with:
+            name: windows-executables
+            path: .fibs/dist/win-vstudio-release/
 
     mac:
         runs-on: macos-latest
